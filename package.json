@@ -1,0 +1,23 @@
+{
+  "name": "web-wiget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmmy/web-wiget.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmmy/web-wiget/issues"
+  },
+  "homepage": "https://github.com/mmmy/web-wiget#readme",
+  "devDependencies": {
+    "electron": "^4.0.2"
+  }
+}
