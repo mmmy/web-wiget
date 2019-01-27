@@ -6,7 +6,7 @@ let win
 
 function createWindow () {
   // 创建浏览器窗口。
-  win = new BrowserWindow({ width: 800, height: 600, frame: true, opacity: 0.5, autoHideMenuBar: true })
+  win = new BrowserWindow({ width: 870, height: 360, frame: true, opacity: 0.5, autoHideMenuBar: true })
   // win.setIgnoreMouseEvents(true)
   // 然后加载应用的 index.html。
   win.loadURL('https://cn.tradingview.com/chart/Yln9OlRb')
