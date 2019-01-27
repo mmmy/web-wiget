@@ -1,4 +1,5 @@
 const { app, BrowserWindow, globalShortcut } = require('electron')
+const config = require('./config')
 
 // 保持对window对象的全局引用，如果不这么做的话，当JavaScript对象被
 // 垃圾回收的时候，window对象将会自动的关闭
@@ -6,10 +7,11 @@ let win
 
 function createWindow () {
   // 创建浏览器窗口。
-  win = new BrowserWindow({ width: 870, height: 360, frame: true, opacity: 0.5, autoHideMenuBar: true })
+  win = new BrowserWindow({ width: config.width, height: config.height, frame: true, opacity: 0.5, autoHideMenuBar: true })
   // win.setIgnoreMouseEvents(true)
   // 然后加载应用的 index.html。
-  win.loadURL('https://cn.tradingview.com/chart/Yln9OlRb')
+  // http://202.182.125.82:3000/d/gJbFdjwmk/combined?orgId=1&refresh=30s&from=now-7d&to=now
+  win.loadURL(config.url)
 
   // 打开开发者工具
   // win.webContents.openDevTools()
@@ -22,7 +24,7 @@ function createWindow () {
     win = null
   })
 
-  globalShortcut.register('CommandOrControl+Alt+0', () => {
+  globalShortcut.register(config.toggleKey, () => {
     if (win.isMinimized()) {
       win.restore()
     } else {
