@@ -26,6 +26,13 @@ menu.append(new MenuItem({
     }
   }
 }))
+menu.append(new MenuItem({
+  label: '刷新',
+  accelerator: 'CmdOrCtrl+R',
+  click: () => {
+    win.reload()
+  }
+}))
 Menu.setApplicationMenu(menu)
 
 function createWindow() {
